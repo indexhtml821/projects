@@ -1,0 +1,3 @@
+/home/estudiante/projects/unittest/CMakeFiles/rebuild_cache.dir
+/home/estudiante/projects/unittest/CMakeFiles/edit_cache.dir
+/home/estudiante/projects/unittest/CMakeFiles/executeTests.dir
