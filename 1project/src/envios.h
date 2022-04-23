@@ -4,11 +4,11 @@
 class Envios
 {
 
-    double kg;
-    double km;
+    float kg;
+    float km;
 
 public:
-    double CalcularCosto(double kg, double km);
+    float CalcularCosto(float kg,float km);
 };
 
 #endif

@@ -9,7 +9,7 @@ tests:
 	    mkdir -p bin	
 		g++ $(FLAGS) test/tests_envios.cpp -o bin/tests_envios.o
 		g++ $(FLAGS) src/envios.cpp -o bin/envios.o
-		g++ -g -o bin/tests bin/tests_envios.o bin/envio.o -lgtest -lgtest_main -lpthread 
+		g++ -g -o bin/tests bin/tests_envios.o bin/envios.o -lgtest -lgtest_main -lpthread 
 
 clean:
 	rm -Rf bin

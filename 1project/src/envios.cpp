@@ -4,8 +4,8 @@
 using namespace std;
 
 
-double Shipping::CalcularCosto(double kg, double km){
+float Envios::CalcularCosto(float kg, float km){
 
-return 2;
+return kg*km;
 
 }
