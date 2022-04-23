@@ -1,7 +1,7 @@
 #ifndef envios_h
 #define envios_h
 
-class Shipping
+class Envios
 {
 
     double kg;
