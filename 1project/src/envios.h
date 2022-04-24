@@ -1,14 +1,14 @@
 #ifndef envios_h
 #define envios_h
 
-class Envios
-{
+class Envios{
 
     float kg;
     float km;
 
 public:
-    float CalcularCosto(float kg,float km);
+  virtual float CalcularCosto(float kg,float km);
+  
 };
 
 #endif
