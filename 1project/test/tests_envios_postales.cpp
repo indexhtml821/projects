@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/enviosFedex.h"
+#include "../src/enviosPostales.h"
 
 namespace
 {
@@ -10,11 +10,11 @@ namespace
         /// AAA
 
         // Arrange - configurar el escenario
-        EnviosFedex enviosFedex(2,2);
+        EnviosPostales enviosPostales(2,2,1);
 
         // Act - ejecute la operación
-        float resultado = enviosFedex.CalcularCosto();
-        float esperada = 70;
+        float resultado = enviosPostales.CalcularCosto();
+        float esperada = 0.112;
 
         //Assert -valide resultados
 

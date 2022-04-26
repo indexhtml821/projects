@@ -2,35 +2,35 @@
 
 using namespace std;
 
-EnviosFedex::EnviosFedex(float kg,float km, int clase){
+EnviosFedex::EnviosFedex(float kg, float km): Envios(kg,km)
+{
 
-this->kg=kg;
-this->km=km;
-this->clase=clase;
-
-    
+    this->kg = kg;
+    this->km = km;
+   ActualizarCostos();
 }
 
-float EnviosFedex::CalcularCosto(){
+float EnviosFedex::CalcularCosto()
+{
 
-return km * ( km * ObtenerPrecio( ));
+     
+
+    precioFinal = km * costoFinal;
+    return precioFinal;
 }
 
+void EnviosFedex::ActualizarCostos()
+{
 
-
-float EnviosFedex::ObtenerPrecio(){
-    float precio= 0;
-
-    if ( 0 <= kg && kg <= 3)
+    if (km > 500)
     {
-        columna = 0;
-    }else if (4 <= kg && kg <= 8)
-    {
-         columna = 1;
-    }else if ( 9 <= kg)
-    {
-        columna = 3;
+        costoFinal += 15.00;
     }
-    precio=precioClase[clase][columna];
-    return  precio ;
+
+    if (kg > 10)
+    {
+        costoFinal += 10.00;
+    }
+
+    costoFinal += costoBase;
 }
