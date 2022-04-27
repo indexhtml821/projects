@@ -26,3 +26,10 @@ float Envios::CalcularCosto(float kg, float km){
 return kg*km;
 
 }
+
+
+float Envios::CalcularCosto(){
+
+return kg*km;
+
+}

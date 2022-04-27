@@ -12,6 +12,7 @@ public:
 Envios(float kg,float km);
 Envios();
   virtual float CalcularCosto(float kg,float km);
+  virtual float CalcularCosto();
   
 };
 
