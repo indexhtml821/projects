@@ -8,7 +8,7 @@
             "name": "g++ - Debug program",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/tiposyclases",
+            "program": "${workspaceFolder}/bin/envios",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

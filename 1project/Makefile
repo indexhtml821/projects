@@ -6,7 +6,8 @@ all:
 	g++ $(FLAGS) src/enviosFedex.cpp -o bin/enviosFedex.o
 	g++ $(FLAGS) src/enviosPostales.cpp -o bin/enviosPostales.o
 	g++ $(FLAGS) src/main.cpp -o bin/main.o
-	g++ -g -o bin/envios bin/main.o bin/envios.o bin/enviosFedex.o bin/enviosPostales.o
+	g++ $(FLAGS) src/listaEnvios.cpp -o bin/listaEnvios.o
+	g++ -g -o bin/envios bin/main.o bin/envios.o bin/enviosFedex.o bin/enviosPostales.o bin/listaEnvios.o
 
 tests:
 	    mkdir -p bin	
