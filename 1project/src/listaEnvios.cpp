@@ -22,7 +22,7 @@ float ListaEnvios::ObtenerTotalEnvios() {
 
     for (Envios *envio : this->enviosEnLista)
     {
-        resultado += envio->CalcularCosto(2,2);
+        resultado += envio->CalcularCosto();
     }
 
     return resultado;

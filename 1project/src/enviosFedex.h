@@ -15,6 +15,7 @@ public:
     EnviosFedex(float kg, float km);
     virtual float CalcularCosto();
     void ActualizarCostos(); 
+    float GetCostoFinal();
     
 };
 
