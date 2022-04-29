@@ -34,3 +34,8 @@ void EnviosFedex::ActualizarCostos()
 
     costoFinal += costoBase;
 }
+
+float EnviosFedex::GetCostoFinal(){
+
+    return costoFinal;
+}
