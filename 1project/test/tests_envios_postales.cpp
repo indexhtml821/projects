@@ -4,6 +4,24 @@
 namespace
 {
 
+
+TEST(Test_Envios, Test_obtenerprecio)
+    {
+
+        /// AAA
+
+        // Arrange - configurar el escenario
+        EnviosPostales enviosPostales(1,4,1);
+        
+
+        // Act - ejecute la operación
+        float resultado = enviosPostales.ObtenerPrecio();
+        float esperada = 0.0280;
+
+        //Assert -valide resultados
+
+        EXPECT_FLOAT_EQ(esperada,resultado);
+    }
     TEST(Test_Envios, Test_enviobase)
     {
 
