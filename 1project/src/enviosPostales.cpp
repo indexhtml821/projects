@@ -14,7 +14,7 @@ this->clase=clase;
 
 float EnviosPostales::CalcularCosto(){
 
-return km * ( km * ObtenerPrecio( ));
+return kg * ( km * ObtenerPrecio( ));
 }
 
 

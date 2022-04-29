@@ -8,8 +8,10 @@ class EnviosPostales : public Envios
 protected:
     
     int clase;                 
-                                //primera clase         //segunda clase         //tercera clase
-    float precioClase[3][3] = {{0.300, 0.450, 0.600}, {0.0280, 0.0530, 0.0750}, {0.0120, 0.0120, 0.0120}};
+                                                
+    float precioClase[3][3] = {{0.300,  0.450 , 0.600 },   //primera clase
+                               {0.0280, 0.0530, 0.0750},   //segunda clase 
+                               {0.0120, 0.0120, 0.0120} }; //tercera clase
     int fila;
     int columna;
 
