@@ -2,7 +2,7 @@
 #include "envios.h"
 #include "enviosFedex.h"
 #include "enviosPostales.h"
-#include "listaEnvios.h"
+
 #include <vector>
 
 using namespace std;
@@ -10,16 +10,22 @@ using namespace std;
 int main()
 {
 
-ListaEnvios *listaEnvios = new ListaEnvios();
+vector <Envios *> enviosEnLista;
 
 EnviosFedex *envioFedex0 = new EnviosFedex(2,2);
 EnviosPostales *envioPostal0= new EnviosPostales(2,2,2);
+enviosEnLista.push_back(envioFedex0);
+enviosEnLista.push_back(envioPostal0);
 
-listaEnvios->AgregarEnvio(envioFedex0);
-listaEnvios->AgregarEnvio(envioPostal0);
+    float resultado = 0;
 
-float total = listaEnvios->ObtenerTotalEnvios();
+    for (Envios *envio : enviosEnLista)
+    {
+        resultado += envio->CalcularCosto();
+    }
 
-cout << "Total en envios= "<<total << endl;
+
+
+cout << "Total en envios= "<<resultado << endl;
 
 }
