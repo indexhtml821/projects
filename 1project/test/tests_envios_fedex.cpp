@@ -32,7 +32,7 @@ TEST(Test_Envios, Test_actualizarcosto)
 
         // Act - ejecute la operación
         float resultado = enviosFedex.CalcularCosto();
-        float esperada = 70;
+        float esperada = 35;
 
         //Assert -valide resultados
 
