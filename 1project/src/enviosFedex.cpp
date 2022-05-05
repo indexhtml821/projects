@@ -15,7 +15,7 @@ float EnviosFedex::CalcularCosto()
 
      
 
-    precioFinal = km * costoFinal;
+    precioFinal =  costoFinal;
     return precioFinal;
 }
 
@@ -35,7 +35,3 @@ void EnviosFedex::ActualizarCostos()
     costoFinal += costoBase;
 }
 
-float EnviosFedex::GetCostoFinal(){
-
-    return costoFinal;
-}
