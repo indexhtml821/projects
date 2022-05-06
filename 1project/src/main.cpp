@@ -28,4 +28,8 @@ enviosEnLista.push_back(envioPostal0);
 
 cout << "Total en envios= "<<resultado << endl;
 
+delete envioFedex0;
+delete envioPostal0;
+
+
 }
