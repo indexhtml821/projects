@@ -12,6 +12,8 @@ test:
 		g++ $(FLAGS) src/empleado.cpp -o bin/empleado.o
 		g++ $(FLAGS) tests/tests_empleado_nomina.cpp -o bin/tests_empleado_nomina.o
 		g++ $(FLAGS) src/empleadoNomina.cpp -o bin/empleadoNomina.o
-		g++ -g -o bin/tests bin/empleado.o bin/tests_empleado_nomina.o bin/empleadoNomina.o  -lgtest -lgtest_main -lpthread
+		g++ $(FLAGS) tests/tests_empleado_horas.cpp -o bin/tests_empleado_horas.o
+		g++ $(FLAGS) src/empleadoHoras.cpp -o bin/empleadoHoras.o
+		g++ -g -o bin/tests bin/empleado.o bin/tests_empleado_nomina.o bin/empleadoNomina.o bin/tests_empleado_horas.o bin/empleadoHoras.o  -lgtest -lgtest_main -lpthread
 clean:
 	rm -Rf bin
