@@ -16,19 +16,13 @@ protected:
     float salario = 0;
 
 public:
-
-    ~Empleado();
-    Empleado(int idEmpleado,
-                   string nombre,
-                   string apellido,
-                   string email,
-                   int tipoEmpleado,
-                   int idSupervisor,
-                   float salario);
-
-    Empleado();               
+  
+    
+         
+      ~Empleado();     
  
-   virtual float CalculoPago() = 0;
+ //  virtual float CalculoPago() = 0;
+    virtual float CalculoPago(float salarioBruto) = 0;
 
 };
 

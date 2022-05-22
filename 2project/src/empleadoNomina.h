@@ -3,10 +3,13 @@
 
 #include "empleado.h"
 
+using namespace std;
+
 class EmpleadoNomina : public Empleado
 {
 
 public:
+  
     EmpleadoNomina(int idEmpleado,
                    string nombre,
                    string apellido,
@@ -15,7 +18,8 @@ public:
                    int idSupervisor,
                    float salario);
 
-    EmpleadoNomina();
+
+      float CalculoPago(float salarioBruto) ;
 
 };
 

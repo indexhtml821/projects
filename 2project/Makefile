@@ -2,21 +2,16 @@ FLAGS = -g -c --std=c++17
 
 all:
 	mkdir -p bin
-	g++ $(FLAGS) src/envios.cpp -o bin/envios.o
-	g++ $(FLAGS) src/enviosFedex.cpp -o bin/enviosFedex.o
-	g++ $(FLAGS) src/enviosPostales.cpp -o bin/enviosPostales.o
+	g++ $(FLAGS) src/empleado.cpp -o bin/empleado.o
+	g++ $(FLAGS) src/empleadoNomina.cpp -o bin/empleadoNomina.o
 	g++ $(FLAGS) src/main.cpp -o bin/main.o
-	g++ -g -o bin/envios bin/main.o bin/envios.o bin/enviosFedex.o bin/enviosPostales.o
+	g++ -g -o bin/planilla  bin/empleadoHoras.o  bin/empleadoNomina.o  bin/main.o bin/empleado.o
 
-tests:
-	    mkdir -p bin	
-		g++ $(FLAGS) test/tests_envios.cpp -o bin/tests_envios.o
-		g++ $(FLAGS) src/envios.cpp -o bin/envios.o
-		g++ $(FLAGS) test/tests_envios_fedex.cpp -o bin/tests_envios_fedex.o
-		g++ $(FLAGS) src/enviosFedex.cpp -o bin/enviosFedex.o
-		g++ $(FLAGS) test/tests_envios_postales.cpp -o bin/tests_envios_postales.o
-		g++ $(FLAGS) src/enviosPostales.cpp -o bin/enviosPostales.o
-		g++ -g -o bin/tests bin/tests_envios.o bin/envios.o bin/tests_envios_fedex.o bin/enviosFedex.o bin/tests_envios_postales.o bin/enviosPostales.o -lgtest -lgtest_main -lpthread 
-
+test:
+	    mkdir -p bin
+		g++ $(FLAGS) src/empleado.cpp -o bin/empleado.o
+		g++ $(FLAGS) tests/tests_empleado_nomina.cpp -o bin/tests_empleado_nomina.o
+		g++ $(FLAGS) src/empleadoNomina.cpp -o bin/empleadoNomina.o
+		g++ -g -o bin/tests bin/empleado.o bin/tests_empleado_nomina.o bin/empleadoNomina.o  -lgtest -lgtest_main -lpthread
 clean:
 	rm -Rf bin

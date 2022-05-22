@@ -5,7 +5,7 @@ namespace
 {
 
 
-TEST(Test_Envios, Test_obtenerprecio)
+TEST(Test_Envios_Postalse, Test_obtenerprecio)
     {
 
         /// AAA

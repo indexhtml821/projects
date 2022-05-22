@@ -8,22 +8,21 @@ EmpleadoNomina::EmpleadoNomina(int idEmpleado,
                                string email,
                                int tipoEmpleado,
                                int idSupervisor,
-                               float salario) : Empleado(idEmpleado,
-                                                         nombre,
-                                                         apellido,
-                                                         email,
-                                                         tipoEmpleado,
-                                                         idSupervisor,
-                                                         salario)
+                               float salario) 
 {
 
     this->idEmpleado = idEmpleado;
-    this->nombre=nombre;
-    this->apellido=apellido;
-    this->email=email;
-    this->tipoEmpleado=tipoEmpleado;
-    this->idSupervisor=idSupervisor;
-    this->salario=salario;
+    this->nombre = nombre;
+    this->apellido = apellido;
+    this->email = email;
+    this->tipoEmpleado = tipoEmpleado;
+    this->idSupervisor = idSupervisor;
+    this->salario = salario;
 }
 
-EmpleadoNomina::EmpleadoNomina(){}
+
+float EmpleadoNomina::CalculoPago(float salarioBruto)
+{
+    float impuesto = 0.07;
+   return salarioBruto-(salarioBruto*impuesto);
+}
