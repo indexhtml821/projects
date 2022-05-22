@@ -17,17 +17,14 @@ EmpleadoNomina::EmpleadoNomina(int idEmpleado,
     this->email = email;
     this->tipoEmpleado = tipoEmpleado;
     this->idSupervisor = idSupervisor;
-    this->salario = salario;
+    this->salariofinal = salario;
 }
 
 
 float EmpleadoNomina::CalculoPago()
 {
     float impuesto = 0.07;
-   return salarioBruto-(salarioBruto*impuesto);
+   return salariofinal-(salariofinal*impuesto);
 }
 
-void EmpleadoNomina::setSalarioBruto(float salarioBruto){
 
-this->salarioBruto=salarioBruto;
-}

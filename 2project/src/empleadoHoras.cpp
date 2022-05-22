@@ -6,8 +6,8 @@ EmpleadoHoras::EmpleadoHoras(int idEmpleado,
                              string apellido,
                              string email,
                              int tipoEmpleado,
-                             int idSupervisor,
-                             float salario)
+                             int idSupervisor, int horasLaboradas,
+                             float pagoPorHora)
 {
 
     this->idEmpleado = idEmpleado;
@@ -16,10 +16,13 @@ EmpleadoHoras::EmpleadoHoras(int idEmpleado,
     this->email = email;
     this->tipoEmpleado = tipoEmpleado;
     this->idSupervisor = idSupervisor;
-    this->salario = salario;
+    this->horasLaboradas=horasLaboradas;
+    this->pagoPorHora=pagoPorHora;
+
 }
 
-float EmpleadoHoras::CalculoPago(){
+float EmpleadoHoras::CalculoPago()
+{
 
-return 0;
+    return (float)this->horasLaboradas * pagoPorHora;
 }

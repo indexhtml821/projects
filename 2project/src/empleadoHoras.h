@@ -6,14 +6,18 @@
 class EmpleadoHoras : public Empleado
 {
 
+    protected:
+    int horasLaboradas=0;
+    float pagoPorHora=0;
+
 public:
     EmpleadoHoras(int idEmpleado,
                    string nombre,
                    string apellido,
                    string email,
                    int tipoEmpleado,
-                   int idSupervisor,
-                   float salario);
+                   int idSupervisor,int horasLaboradas,
+    float pagoPorHora);
 
    float CalculoPago() ;
 

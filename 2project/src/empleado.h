@@ -13,7 +13,7 @@ protected:
     string email = "";
     int tipoEmpleado = 0;
     int idSupervisor = 0;
-    float salario = 0;
+    
 
 public:
   
