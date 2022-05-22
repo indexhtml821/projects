@@ -21,8 +21,13 @@ EmpleadoNomina::EmpleadoNomina(int idEmpleado,
 }
 
 
-float EmpleadoNomina::CalculoPago(float salarioBruto)
+float EmpleadoNomina::CalculoPago()
 {
     float impuesto = 0.07;
    return salarioBruto-(salarioBruto*impuesto);
+}
+
+void EmpleadoNomina::setSalarioBruto(float salarioBruto){
+
+this->salarioBruto=salarioBruto;
 }

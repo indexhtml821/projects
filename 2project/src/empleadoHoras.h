@@ -15,8 +15,10 @@ public:
                    int idSupervisor,
                    float salario);
 
-    EmpleadoHoras();
+   float CalculoPago() ;
 
 };
+
+
 
 #endif

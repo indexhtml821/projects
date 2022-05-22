@@ -21,8 +21,9 @@ public:
          
       ~Empleado();     
  
- //  virtual float CalculoPago() = 0;
-    virtual float CalculoPago(float salarioBruto) = 0;
+
+    
+    virtual float CalculoPago() = 0;
 
 };
 
