@@ -10,13 +10,13 @@ all:
 
 tests:
 	    mkdir -p bin	
-		g++ $(FLAGS) test/tests_envios.cpp -o bin/tests_envios.o
-		g++ $(FLAGS) src/envios.cpp -o bin/envios.o
+	
+	    g++ $(FLAGS) src/envios.cpp -o bin/envios.o
 		g++ $(FLAGS) test/tests_envios_fedex.cpp -o bin/tests_envios_fedex.o
 		g++ $(FLAGS) src/enviosFedex.cpp -o bin/enviosFedex.o
 		g++ $(FLAGS) test/tests_envios_postales.cpp -o bin/tests_envios_postales.o
 		g++ $(FLAGS) src/enviosPostales.cpp -o bin/enviosPostales.o
-		g++ -g -o bin/tests bin/tests_envios.o bin/envios.o bin/tests_envios_fedex.o bin/enviosFedex.o bin/tests_envios_postales.o bin/enviosPostales.o -lgtest -lgtest_main -lpthread 
+		g++ -g -o bin/tests  bin/envios.o bin/tests_envios_fedex.o bin/enviosFedex.o bin/tests_envios_postales.o bin/enviosPostales.o -lgtest -lgtest_main -lpthread 
 
 clean:
 	rm -Rf bin
