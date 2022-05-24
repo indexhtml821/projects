@@ -1,4 +1,5 @@
 #include "procesador.h"
+#include <iostream>
 #include <fstream>
 
 using namespace std;
@@ -35,7 +36,7 @@ int main()
     }
 
 
-    
+
 
     lectorPersonas.close();
     lectorNomina.close();
