@@ -8,9 +8,10 @@ using namespace std;
 class EmpleadoNomina : public Empleado
 {
 protected:
-float salariofinal;
+    float salarioFinal;
+    float salarioBruto;
+
 public:
-  
     EmpleadoNomina(int idEmpleado,
                    string nombre,
                    string apellido,
@@ -19,10 +20,10 @@ public:
                    int idSupervisor,
                    float salario);
 
-
-      float CalculoPago() ;
-     
-
+    void SetSalario(float salario);
+    void CalculoPago();
+    string DevolverInfoEmpleado();
+    float DevolverSalarioFinal(); 
 };
 
 #endif
