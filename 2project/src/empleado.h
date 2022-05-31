@@ -13,18 +13,24 @@ protected:
     string email = "";
     int tipoEmpleado = 0;
     int idSupervisor = 0;
-    
 
 public:
-  
-    
-         
-      ~Empleado();     
- 
+    ~Empleado();
 
-    
-    virtual float CalculoPago() = 0;
+    virtual void CalculoPago() = 0;
+    virtual string DevolverInfoEmpleado() = 0;
+    int ObtenerTipoEmpleado();
+    int ObtenerIdEmpleado();
+    int ObtenerIdSupervisor();
+    string ObtenerNombre();
 
+    Empleado(int idEmpleado,
+             string nombre,
+             string apellido,
+             string email,
+             int tipoEmpleado,
+             int idSupervisor);
+    Empleado();
 };
 
 #endif

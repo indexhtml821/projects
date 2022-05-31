@@ -1,7 +1,6 @@
 #include "procesador.h"
 #include "empleadoHoras.h"
 #include "empleadoNomina.h"
-#include <sstream>
 #include <iomanip>
 Procesador::Procesador(istream *streamPersonas, istream *streamNomina, istream *streamHoras)
 {
@@ -68,7 +67,9 @@ void Procesador::anadirEmpleados()
                                                          idSupervisor,
                                                          salario);
             empleadoNuevo->CalculoPago();
-            empleados.insert(std::pair<int, Empleado *>(idEmpleado, empleadoNuevo));
+            empleados->InsertarEmpleado(empleadoNuevo);
+
+            // delete empleado nuevo
         }
         else if (tipoEmpleado == 2)
         {
@@ -88,7 +89,7 @@ void Procesador::anadirEmpleados()
                                                         horasLaboradas,
                                                         pagoPorHora);
             empleadoNuevo->CalculoPago();
-            empleados.insert(std::pair<int, Empleado *>(idEmpleado, empleadoNuevo));
+            empleados->InsertarEmpleado(empleadoNuevo);
         }
     }
 }
@@ -105,9 +106,26 @@ string Procesador::obtenerHoras(int id)
 
 string Procesador::obtenerEmpleado(int id)
 {
-    Empleado *empleadoSolicitado = empleados.at(id);
+
+    Empleado *empleadoSolicitado = empleados->ObtenerEmpleado(id);
 
     string infoSolicitada = empleadoSolicitado->DevolverInfoEmpleado();
 
     return infoSolicitada;
+}
+
+std::ostream& operator<<(ostream &o,const Procesador *procesador)
+{
+
+    int contador = procesador->empleados->devolverIndicePlanilla().size();
+
+    for (int i = 1; i < contador+1; i++)
+    {
+        Empleado *empleado = procesador->empleados->ObtenerEmpleado(i);
+        Empleado *supervisor = procesador->empleados->ObtenerEmpleado(empleado->ObtenerIdSupervisor());
+
+        o << empleado->DevolverInfoEmpleado() << "," << supervisor->ObtenerNombre() << endl;
+    }
+
+    return o;
 }

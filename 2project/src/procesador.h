@@ -2,9 +2,10 @@
 #define PROCESADOR_H
 
 #include "empleado.h"
+#include "planilla.h"
 #include <map>
-#include <vector>
-#include <istream>
+#include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -14,7 +15,7 @@ protected:
   istream *streamPersonas;
   istream *streamNomina;
   istream *streamHoras;
-  map<int, Empleado *> empleados;
+  Planilla *empleados = new Planilla();
   map<int, float> salariosNomina;
   map<int, string> salariosHora;
 
@@ -26,6 +27,7 @@ public:
   float obtenerNomina(int id);
   string obtenerHoras(int id);
   string obtenerEmpleado(int id);
+  friend ostream& operator << (ostream &o, const Procesador *procesador);
 };
 
 #endif

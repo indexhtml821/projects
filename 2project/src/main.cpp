@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 
+
 using namespace std;
 
 int main()
@@ -35,8 +36,20 @@ int main()
         return -1;
     }
 
+    Procesador procesador(&lectorPersonas, &lectorNomina, &lectorHorasTrabajadas);
 
+    procesador.anadirEmpleados();
 
+    ofstream reporte("reportePlanilla.csv", std::ifstream::out); // Por default abriendo como texto
+
+    if (!reporte.is_open())
+    {
+        std::cerr << "Error abriendo archivo reporteCatalogo.txt" << std::endl;
+        return -1;
+    }
+
+    reporte << &procesador;
+    reporte.close();
 
     lectorPersonas.close();
     lectorNomina.close();
