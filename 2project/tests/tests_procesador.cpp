@@ -62,8 +62,8 @@ namespace
     ostringstream streamPruebaPersonas{};
     streamPruebaPersonas << "1 Denis Tyler denis_tyler@biz.com 1 1" << endl;
     streamPruebaPersonas << "2 Clarissa Parker clarissa_parker@biz.com 1 1" << endl;
-    streamPruebaPersonas << "487 Bart Noon Bart_Noon486@iatim.tech 2 236" << endl;
-    streamPruebaPersonas << "516 Rosa Tait Rosa_Tait1615@tonsy.org 2 254" << endl;
+    streamPruebaPersonas << "487 Bart Noon Bart_Noon486@iatim.tech 2 1" << endl;
+    streamPruebaPersonas << "516 Rosa Tait Rosa_Tait1615@tonsy.org 2 2" << endl;
 
     ostringstream streamPruebaNomina{};
     streamPruebaNomina << "1 4600.9" << endl;
@@ -84,13 +84,11 @@ namespace
     Procesador procesador(&streamPersonas, &streamNomina, &streamHoras);
 
     // Act - ejecute la operación`-
-    procesador.anadirSalariosHoras();
-    procesador.anadirSalariosNomina();
     procesador.anadirEmpleados();
 
     // Assert - valide los resultados
 
-    string esperada[4] = {"1 Denis Tyler denis_tyler@biz.com 1 1 4600.90 4278.837", "2 Clarissa Parker clarissa_parker@biz.com 1 1 3097.50 2880.675", "487 Bart Noon Bart_Noon486@iatim.tech 2 236 60 45.91 2754.6", "516 Rosa Tait Rosa_Tait1615@tonsy.org 2 254 20 47.20 944.0"};
+    string esperada[4] = {"1 Denis Tyler denis_tyler@biz.com 1 1 4600.90 4278.837", "2 Clarissa Parker clarissa_parker@biz.com 1 1 3097.50 2880.675", "487 Bart Noon Bart_Noon486@iatim.tech 2 1 60 45.91 2754.6", "516 Rosa Tait Rosa_Tait1615@tonsy.org 2 2 20 47.20 944.0"};
     int idResultado[4] = {1, 2, 487, 516};
 
     
