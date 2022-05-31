@@ -1,3 +1,14 @@
+# Para correr este programa use en su terminal linux
+
+make all
+bin/organizador
+
+# Para correr los tests
+
+make tests
+bint/tests
+
+
 # Libreria de planilla
 
 Especificación de requerimientos:
