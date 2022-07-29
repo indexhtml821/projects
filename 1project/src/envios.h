@@ -1,7 +1,8 @@
 #ifndef envios_h
 #define envios_h
 
-class Envios{
+class Envios
+{
 
 protected:
     float kg;
@@ -9,11 +10,9 @@ protected:
     float precioFinal;
 
 public:
-Envios(float kg,float km);
-Envios();
-virtual float CalcularCosto(float kg,float km);
-virtual float CalcularCosto();
-  
+    Envios(float kg, float km);
+    Envios();
+    virtual float CalcularCosto() = 0;
 };
 
 #endif
