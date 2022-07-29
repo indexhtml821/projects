@@ -6,16 +6,14 @@
 class EnviosFedex : public Envios
 {
 protected:
- 
     float costoBase = 35.00;
-    float costoFinal= 0;
-    float precioFinal = 0 ;
- 
+    float costoFinal = 0;
+    float precioFinal = 0;
+
 public:
     EnviosFedex(float kg, float km);
     virtual float CalcularCosto();
-    void ActualizarCostos(); 
-
+    void ActualizarCostos();
 };
 
 #endif
