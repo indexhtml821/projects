@@ -2,21 +2,19 @@
 
 using namespace std;
 
-EnviosFedex::EnviosFedex(float kg, float km): Envios(kg,km)
+EnviosFedex::EnviosFedex(float kg, float km) : Envios(kg, km)
 {
 
     this->kg = kg;
     this->km = km;
-   ActualizarCostos();
+    ActualizarCostos();
 }
 
 float EnviosFedex::CalcularCosto()
 {
 
-     
+    precioFinal = costoFinal;
 
-    precioFinal =  costoFinal;
-    
     return precioFinal;
 }
 
