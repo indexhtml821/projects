@@ -10,12 +10,12 @@ using namespace std;
 int main()
 {
 
-vector <Envios *> enviosEnLista;
+    vector<Envios *> enviosEnLista;
 
-EnviosFedex *envioFedex0 = new EnviosFedex(2,2);
-EnviosPostales *envioPostal0= new EnviosPostales(2,2,2);
-enviosEnLista.push_back(envioFedex0);
-enviosEnLista.push_back(envioPostal0);
+    EnviosFedex *envioFedex0 = new EnviosFedex(2, 2);
+    EnviosPostales *envioPostal0 = new EnviosPostales(2, 2, 2);
+    enviosEnLista.push_back(envioFedex0);
+    enviosEnLista.push_back(envioPostal0);
 
     float resultado = 0;
 
@@ -24,12 +24,8 @@ enviosEnLista.push_back(envioPostal0);
         resultado += envio->CalcularCosto();
     }
 
+    cout << "Total en envios= " << resultado << endl;
 
-
-cout << "Total en envios= "<<resultado << endl;
-
-delete envioFedex0;
-delete envioPostal0;
-
-
+    delete envioFedex0;
+    delete envioPostal0;
 }
