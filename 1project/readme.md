@@ -1,3 +1,25 @@
+# Cómo usar este código
+
+## Compilar el programa
+
+```console
+foo@bar:~/...$ make all
+```
+## Correr programa
+```console
+foo@bar:~/...$ bin/envios
+```
+____________________________________
+## Compilación de tests
+```console
+foo@bar:~/$ make test
+```
+## Correr tests
+```console
+foo@bar:~/$ bin/tests
+```
+
+
 # Libreria de clases de envios
 
 Se requiere construir un conjunto de clases que permitan calcular el costo de diferentes tipos
